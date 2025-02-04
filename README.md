@@ -18,7 +18,7 @@ A ruby-on-rails forums website recreation meant to be synced with [Swofty's Hypi
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/hypixel-forums.git
+git clone https://github.com/Swofty-Developments/HypixelForums.git
 cd hypixel-forums
 ```
 
