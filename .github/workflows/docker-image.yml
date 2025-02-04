@@ -15,4 +15,9 @@ jobs:
     - name: Install dependencies
       run: sudo apt-get update && sudo apt-get install -y libyaml-dev
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag hypixelforums:$(date +%s)
+      run: |
+        docker build . \
+          --file Dockerfile \
+          --build-arg DEBIAN_FRONTEND=noninteractive \
+          --build-arg BUILD_PACKAGES="libyaml-dev" \
+          --tag hypixelforums:$(date +%s)
