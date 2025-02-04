@@ -1,0 +1,192 @@
+// application.scss
+@import "_header.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0b0a07;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.header-background {
+  background: url('https://hypixel.net/styles/hypixel-v2/images/header-bg.png') no-repeat center top;
+  background-size: 130% auto;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+.brand-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin-top: 20px;
+  padding: 50px 20px 20px;
+  font-family: Neuton, serif;
+
+  .logo-section {
+    img {
+      width: 300px;
+      height: auto;
+    }
+  }
+
+  .server-info {
+    text-align: right;
+    color: #ffd87d;
+
+    .player-count {
+      font-weight: 100;
+      color: #eedebd;
+      font-size: 15px;
+      margin-bottom: 5px;
+      text-shadow: 0 0 10px #000;
+
+      b {
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+
+    .play-now-button {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/header-play-button.png') no-repeat center;
+      display: flex;           // flex for easy centering
+      align-items: center;     // Vertical center
+      justify-content: center; // Horizontal center
+
+      width: auto;
+      height: 100px;
+      margin-top: 10px;
+      transition: filter 1s ease;  // This creates the smooth effect
+
+      text-decoration: none;   // Remove underline
+      color: #302409;
+      font-size: 20px;
+      line-height: 77px;
+      text-align: center;
+
+      &:hover {
+        background: url('https://hypixel.net/styles/hypixel-v2/images/header-play-button-hover.png') no-repeat center;
+      }
+    }
+
+    .server-ip {
+      padding-top: 13px;
+      padding-right: 7px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #f4c75d;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px #000;
+
+      b {
+        color: #FFFFFF;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.navigation-bar {
+  background: url('https://hypixel.net/styles/hypixel-v2/images/menu-border-bg.png') repeat-x;
+  max-width: 1200px;
+  margin: 20px auto;
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+
+  .nav-item {
+    height: 47px;
+    text-indent: -9999px;
+    display: block;
+    flex: 1;
+    background-position: center top;
+
+    &.home {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-home.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.games {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-games.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.leaderboards {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-leaderboards.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.forums {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-forums.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.wiki {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-wiki.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.rules {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-rules.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.support {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-support.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.store {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-store.png') no-repeat;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    &.search {
+      background: url('https://hypixel.net/styles/hypixel-v2/images/nav-buttons/button-search-small.png') no-repeat;
+      flex: 0 0 47px;
+      transition: filter 0.2s ease;  // This creates the smooth effect
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+  }
+}

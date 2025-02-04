@@ -1,0 +1,102 @@
+.p-staffBar {
+  font-size: 13px;
+  font: 15px / 1.4 sans-serif;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: #ffd87d;
+  background: rgba(16, 14, 9, 0.8);
+  border-bottom: 1px solid #4e422f;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+
+  // Add an empty div for left side
+  &::before {
+    content: '';
+    width: 70%; // Adjust this width as needed
+    left: 50%; // Position from left edge
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 20%; // This pushes it to the left a bit
+
+    a {
+      color: #ffd87d;
+      text-decoration: none;
+      padding: 5px 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      font-size: 13px;
+      position: relative;
+
+      &:hover {
+        background: rgba(255, 216, 125, 0.1);
+      }
+
+      // Add vertical line after each link
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 150%;
+        width: 1px;
+        background-color: #4e422f;
+      }
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .profile-pic {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .username {
+      color: #ffd87d;
+      font-weight: bold;
+    }
+
+    .icon-button {
+      background: none;
+      border: none;
+      color: #ffd87d;
+      cursor: pointer;
+      position: relative;
+      padding: 5px;
+
+      &:hover {
+        color: #fff;
+      }
+
+      .notification-badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: #ff4444;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 5px;
+        font-size: 10px;
+        min-width: 15px;
+        text-align: center;
+      }
+    }
+  }
+}

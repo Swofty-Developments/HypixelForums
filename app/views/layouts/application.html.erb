@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hypixel Forums</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_importmap_tags %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="https://hypixel.net/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://hypixel.net/favicon-16x16.png" sizes="16x16">
+</head>
+
+  <body>
+    <%= render 'layouts/header' %>
+
+    <div class="header-background">
+      <div class="brand-container">
+        <div class="logo-section">
+          <img src="https://hypixel.net/styles/hypixel-v2/images/header-logo.png" alt="Hypixel">
+        </div>
+
+        <div class="server-info">
+          <div class="player-count">JOIN <b>31,000+</b> OTHER ONLINE PLAYERS!</div>
+          <%= link_to "PLAY NOW", "#", class: "play-now-button" %>
+          <div class="server-ip">SERVER IP • <b>MC.HYPIXEL.NET</b></div>
+        </div>
+      </div>
+
+      <%= render 'layouts/navigation' %>
+    </div>
+
+    <div class="main-content">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<header class="p-staffBar">
+  <div class="user-info">
+    <% if user_signed_in? %>
+      <% if current_user.hypixel_user.present? %>
+        <img src="<%= current_user.hypixel_user.profile_picture_link %>"
+             alt="Profile"
+             class="profile-pic"
+             onerror="this.src='/default-avatar.png'">
+
+        <span class="username">
+          <%= current_user.hypixel_user.username %>
+        </span>
+
+        <%= button_to messages_path, method: :get, class: "icon-button messages-icon" do %>
+          <i class="fas fa-envelope"></i>
+          <% if @unread_messages_count && @unread_messages_count > 0 %>
+            <span class="notification-badge"><%= @unread_messages_count %></span>
+          <% end %>
+        <% end %>
+
+        <%= button_to notifications_path, method: :get, class: "icon-button notifications-icon" do %>
+          <i class="fas fa-bell"></i>
+          <% if @unread_notifications_count && @unread_notifications_count > 0 %>
+            <span class="notification-badge"><%= @unread_notifications_count %></span>
+          <% end %>
+        <% end %>
+
+        <%= button_to destroy_user_session_path,
+                      method: :delete,
+                      class: "auth-buttons" do %>
+          <i class="fas fa-sign-out-alt"></i> Logout
+        <% end %>
+      <% else %>
+        <!-- User logged in but no HypixelUser profile -->
+        <!-- Throw error -->
+
+      <% end %>
+    <% else %>
+      <div class="auth-buttons">
+        <%= link_to "Login", new_user_session_path %>
+        <%= link_to "Register", new_user_registration_path %>
+      </div>
+    <% end %>
+  </div>
+</header>
